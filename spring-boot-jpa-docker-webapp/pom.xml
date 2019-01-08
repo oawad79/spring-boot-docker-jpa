@@ -41,6 +41,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.11</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -60,10 +61,12 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.11</version>
+                <version>1.2.0</version>
                 <configuration>
                     <imageName>g00glen00b/${project.artifactId}</imageName>
                     <dockerDirectory>${docker.baseDir}</dockerDirectory>
+					<!--<dockerHost>https://192.168.112.2:2376</dockerHost>-->
+					<!--<dockerCertPath>/Users/oawad/.docker/machine/machines/default</dockerCertPath>-->
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
